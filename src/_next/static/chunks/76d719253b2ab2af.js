@@ -1,0 +1,1 @@
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,14851,i=>{"use strict";var t=i.i(43476),n=i.i(46932);function o({children:i,className:o="",initial:e={},animate:s={},transition:a={}}){return(0,t.jsx)(n.motion.div,{className:o,initial:e,animate:s,transition:a,children:i})}i.s(["MotionDiv",()=>o])}]);
