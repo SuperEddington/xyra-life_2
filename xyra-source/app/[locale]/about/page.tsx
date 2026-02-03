@@ -14,7 +14,7 @@ export default async function AboutPage({ params }: Props) {
   setRequestLocale(locale);
 
   // 4. 获取翻译 (传入 locale 确保静态构建正确)
-  const t = await getTranslations({ locale, namespace: "About" });
+  const t = await getTranslations({ locale, namespace: "about" });
 
   return (
     <div className="min-h-screen">
