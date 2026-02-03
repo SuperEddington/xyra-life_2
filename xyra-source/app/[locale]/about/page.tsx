@@ -1,7 +1,19 @@
 import { getTranslations } from "next-intl/server";
 import { MotionDiv } from "../../components/MotionDiv";
+// 1. 引入这个关键函数，专门用于静态生成
+import { unstable_setRequestLocale } from "next-intl/server"; 
 
-export default async function AboutPage() {
+// 2. 定义页面接收的参数类型
+type Props = {
+  params: { locale: string };
+};
+
+// 3. 在参数里解构出 locale
+export default async function AboutPage({ params: { locale } }: Props) {
+  // 4. 【关键一步】启用静态生成模式
+  // 这行代码告诉 Next.js："现在是构建阶段，语言已经确定了，不要去读浏览器请求头"
+  unstable_setRequestLocale(locale);
+
   const t = await getTranslations();
 
   return (
