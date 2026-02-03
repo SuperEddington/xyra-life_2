@@ -1,36 +1,35 @@
-import { Product } from "../types";
+export interface Product {
+  id: string;
+  name: string;
+  price: number;
+  image: string;
+  category: string;
+  description?: string;
+}
 
 export const products: Product[] = [
   {
-    id: "elegant-fishing-rod",
-    name: "Elegant Fishing Rod",
-    price: 299,
-    image: "/images/rod.jpg",
-    description: "A beautifully crafted fishing rod designed for the modern woman angler. Features premium carbon fiber construction with an elegant rose gold finish.",
-    category: "Rods",
+    id: '1',
+    name: 'Muse Reel 3000',
+    price: 399,
+    image: '/images/reel-1.jpg', // 确保 public/images 下有图，没有也没事，只显示占位
+    category: 'Reels',
+    description: 'Professional grade fishing reel.'
   },
   {
-    id: "premium-reel",
-    name: "Premium Reel",
-    price: 189,
-    image: "/images/reel.jpg",
-    description: "Smooth-operating premium reel with precision engineering. Lightweight design with champagne gold accents.",
-    category: "Reels",
+    id: '2',
+    name: 'Siren Lure Set',
+    price: 89,
+    image: '/images/lure-1.jpg',
+    category: 'Lures',
+    description: 'Hand-painted premium lures.'
   },
   {
-    id: "designer-tackle-box",
-    name: "Designer Tackle Box",
-    price: 129,
-    image: "/images/tackle.jpg",
-    description: "Stylish and functional tackle box with organized compartments. Crafted from sustainable materials with leather trim.",
-    category: "Accessories",
-  },
+    id: '3',
+    name: 'Voyager Rod',
+    price: 450,
+    image: '/images/rod-1.jpg',
+    category: 'Rods',
+    description: 'Carbon fiber lightweight rod.'
+  }
 ];
-
-export function getProductById(id: string): Product | undefined {
-  return products.find((p) => p.id === id);
-}
-
-export function getRelatedProducts(currentId: string): Product[] {
-  return products.filter((p) => p.id !== currentId).slice(0, 2);
-}
