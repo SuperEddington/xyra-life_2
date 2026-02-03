@@ -2,7 +2,7 @@
   "nav": {
     "home": "Accueil",
     "shop": "Boutique",
-    "about": "À Propos",
+    "about": "Le Rituel",
     "cart": "Panier",
     "cartEmpty": "Votre panier est vide"
   },
@@ -44,11 +44,16 @@
     "subtitle": "La Muse du Style de Vie de Pêche",
     "story": {
       "title": "Notre Histoire",
-      "content": "XYRA est né d'une passion pour la pêche et d'un désir d'apporter de l'élégance à ce sport. Nous croyons que la pêche n'est pas qu'un simple passe-temps—c'est un style de vie qui mérite raffinement et style."
+      "content": "XYRA est né d'une passion pour la pêche et d'un désir d'apporter de l'élégance à ce sport. Nous croyons que la pêche n'est pas qu'un simple passe-temps, c'est un style de vie qui mérite raffinement et style."
     },
     "mission": {
       "title": "Notre Mission",
       "content": "Autonomiser les femmes qui aiment la pêche avec des équipements premium qui combinent fonctionnalité et élégance intemporelle. Chaque produit est conçu pour la pêcheuse moderne."
+    },
+    "values": {
+      "elegance": "Nous croyons que l'équipement de pêche doit être aussi beau que fonctionnel.",
+      "quality": "Chaque produit est fabriqué avec des matériaux nobles et un souci minutieux du détail.",
+      "empowerment": "Nous célébrons les femmes qui embrassent pleinement leur passion pour la pêche."
     }
   },
   "footer": {
