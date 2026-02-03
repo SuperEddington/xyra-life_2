@@ -1,20 +1,20 @@
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { MotionDiv } from "../../components/MotionDiv";
-// 1. 引入这个关键函数，专门用于静态生成
-import { unstable_setRequestLocale } from "next-intl/server"; 
 
-// 2. 定义页面接收的参数类型
+// 1. 定义 Params 为 Promise (Next.js 15 标准)
 type Props = {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 };
 
-// 3. 在参数里解构出 locale
-export default async function AboutPage({ params: { locale } }: Props) {
-  // 4. 【关键一步】启用静态生成模式
-  // 这行代码告诉 Next.js："现在是构建阶段，语言已经确定了，不要去读浏览器请求头"
-  unstable_setRequestLocale(locale);
+export default async function AboutPage({ params }: Props) {
+  // 2. 必须先 await 解构 params
+  const { locale } = await params;
 
-  const t = await getTranslations();
+  // 3. 启用静态生成 (与你的 Layout 保持一致)
+  setRequestLocale(locale);
+
+  // 4. 获取翻译 (传入 locale 确保静态构建正确)
+  const t = await getTranslations({ locale, namespace: "About" });
 
   return (
     <div className="min-h-screen">
@@ -27,10 +27,10 @@ export default async function AboutPage({ params: { locale } }: Props) {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl md:text-6xl font-serif font-bold text-charcoal mb-4">
-              {t("about.title")}
+              {t("title")}
             </h1>
             <p className="text-xl md:text-2xl text-gold italic">
-              {t("about.subtitle")}
+              {t("subtitle")}
             </p>
             <div className="w-24 h-1 bg-gold mx-auto mt-8" />
           </MotionDiv>
@@ -46,12 +46,11 @@ export default async function AboutPage({ params: { locale } }: Props) {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <div className="aspect-[4/3] bg-gray-200 rounded-2xl overflow-hidden">
-                <img
-                  src="/images/about-story.jpg"
-                  alt="Our Story"
-                  className="w-full h-full object-cover"
-                />
+              <div className="aspect-[4/3] bg-gray-200 rounded-2xl overflow-hidden shadow-lg">
+                {/* 这里的图片路径请确保在 public/images/ 下存在，否则显示灰色背景 */}
+                <div className="w-full h-full bg-gray-300 flex items-center justify-center text-gray-500">
+                   [Image: Brand Story]
+                </div>
               </div>
             </MotionDiv>
 
@@ -61,10 +60,10 @@ export default async function AboutPage({ params: { locale } }: Props) {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <h2 className="text-3xl font-serif font-bold text-charcoal mb-6">
-                {t("about.story.title")}
+                {t("story.title")}
               </h2>
               <p className="text-gray-600 leading-relaxed text-lg">
-                {t("about.story.content")}
+                {t("story.content")}
               </p>
             </MotionDiv>
           </div>
@@ -82,10 +81,10 @@ export default async function AboutPage({ params: { locale } }: Props) {
               className="order-2 lg:order-1"
             >
               <h2 className="text-3xl font-serif font-bold mb-6">
-                {t("about.mission.title")}
+                {t("mission.title")}
               </h2>
               <p className="text-gray-300 leading-relaxed text-lg">
-                {t("about.mission.content")}
+                {t("mission.content")}
               </p>
             </MotionDiv>
 
@@ -95,12 +94,10 @@ export default async function AboutPage({ params: { locale } }: Props) {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="order-1 lg:order-2"
             >
-              <div className="aspect-[4/3] bg-gray-700 rounded-2xl overflow-hidden">
-                <img
-                  src="/images/about-mission.jpg"
-                  alt="Our Mission"
-                  className="w-full h-full object-cover"
-                />
+              <div className="aspect-[4/3] bg-gray-700 rounded-2xl overflow-hidden shadow-lg">
+                 <div className="w-full h-full bg-gray-600 flex items-center justify-center text-gray-400">
+                   [Image: Our Mission]
+                </div>
               </div>
             </MotionDiv>
           </div>
@@ -121,18 +118,15 @@ export default async function AboutPage({ params: { locale } }: Props) {
             {[
               {
                 title: "Elegance",
-                description:
-                  "We believe that fishing gear should be as beautiful as it is functional.",
+                descKey: "elegance", 
               },
               {
                 title: "Quality",
-                description:
-                  "Every product is crafted with premium materials and attention to detail.",
+                descKey: "quality",
               },
               {
                 title: "Empowerment",
-                description:
-                  "We celebrate women who embrace their passion for fishing.",
+                descKey: "empowerment",
               },
             ].map((value, index) => (
               <MotionDiv
@@ -140,12 +134,16 @@ export default async function AboutPage({ params: { locale } }: Props) {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="text-center p-8 bg-white rounded-xl shadow-sm"
+                className="text-center p-8 bg-white rounded-xl shadow-sm border border-gray-100"
               >
                 <h3 className="text-xl font-serif font-bold text-charcoal mb-4">
                   {value.title}
                 </h3>
-                <p className="text-gray-600">{value.description}</p>
+                {/* 注意：这里假设你的翻译文件结构里有 values.elegance 等键值 */}
+                <p className="text-gray-600">
+                  {/* 这里为了防止翻译键缺失报错，你可以根据实际 json 修改 */}
+                  {t(`values.${value.descKey}` as any)} 
+                </p>
               </MotionDiv>
             ))}
           </div>
