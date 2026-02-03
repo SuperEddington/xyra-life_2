@@ -1,58 +1,63 @@
 {
   "nav": {
     "home": "首页",
-    "shop": "商店",
-    "about": "关于",
-    "cart": "购物车",
-    "cartEmpty": "购物车是空的"
+    "shop": "选购",
+    "about": "品牌故事",
+    "cart": "购物袋",
+    "cartEmpty": "您的购物袋是空的"
   },
   "home": {
     "hero": {
       "title": "XYRA",
-      "subtitle": "缪斯",
-      "description": "为现代女性打造的优雅钓鱼生活方式",
+      "subtitle": "灵感缪斯",
+      "description": "专为现代女性打造的优雅垂钓生活方式",
       "cta": "探索系列"
     },
     "featured": {
-      "title": "精选产品",
-      "viewAll": "查看全部产品"
+      "title": "精选单品",
+      "viewAll": "查看全部"
     }
   },
   "shop": {
-    "title": "我们的产品",
-    "subtitle": "探索我们精心策划的钓鱼生活必需品系列",
-    "addToCart": "加入购物车",
+    "title": "系列臻选",
+    "subtitle": "探索我们精心策划的垂钓生活美学",
+    "addToCart": "加入购物袋",
     "viewDetails": "查看详情"
   },
   "product": {
-    "addToCart": "加入购物车",
+    "addToCart": "加入购物袋",
     "quantity": "数量",
-    "description": "描述",
-    "specifications": "规格",
-    "relatedProducts": "相关产品"
+    "description": "产品描述",
+    "specifications": "规格参数",
+    "relatedProducts": "猜你喜欢"
   },
   "cart": {
-    "title": "您的购物车",
-    "empty": "购物车是空的",
-    "continueShopping": "继续购物",
+    "title": "您的购物袋",
+    "empty": "您的购物袋是空的",
+    "continueShopping": "继续选购",
     "subtotal": "小计",
-    "checkout": "结账",
-    "remove": "删除"
+    "checkout": "前往结账",
+    "remove": "移除"
   },
   "about": {
     "title": "关于 XYRA",
-    "subtitle": "钓鱼生活方式的缪斯",
+    "subtitle": "垂钓生活方式的灵感缪斯",
     "story": {
-      "title": "我们的故事",
-      "content": "XYRA 诞生于对钓鱼的热爱，以及为这项运动带来优雅的愿望。我们相信钓鱼不仅仅是一种爱好——它是一种值得精致和时尚的生活方式。"
+      "title": "品牌故事",
+      "content": "XYRA 诞生于对垂钓的热爱，以及赋予这项运动以优雅的愿景。我们坚信，垂钓不仅仅是一种爱好，更是一种值得精致对待的生活仪式。"
     },
     "mission": {
       "title": "我们的使命",
-      "content": "用将功能性与永恒优雅相结合的高端装备，赋能热爱钓鱼的女性。每一款产品都是为现代钓鱼爱好者精心设计的。"
+      "content": "用兼具功能性与永恒优雅的高端装备，赋能每一位热爱垂钓的女性。每一款产品，皆为现代女性垂钓者匠心打造。"
+    },
+    "values": {
+      "elegance": "优雅：我们坚信，渔具在具备强大功能的同时，也应拥有设计之美。",
+      "quality": "品质：每一件产品皆严选顶级材质，于细节处见匠心。",
+      "empowerment": "赋能：我们赞美并支持每一位拥抱垂钓热情的女性。"
     }
   },
   "footer": {
     "copyright": "© 2026 XYRA. 保留所有权利。",
-    "tagline": "钓鱼生活方式的缪斯"
+    "tagline": "垂钓生活方式的灵感缪斯"
   }
 }
