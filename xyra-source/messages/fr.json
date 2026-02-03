@@ -1,0 +1,58 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "shop": "Boutique",
+    "about": "À Propos",
+    "cart": "Panier",
+    "cartEmpty": "Votre panier est vide"
+  },
+  "home": {
+    "hero": {
+      "title": "XYRA",
+      "subtitle": "La Muse",
+      "description": "Un style de vie de pêche élégant pour la femme moderne",
+      "cta": "Explorer la Collection"
+    },
+    "featured": {
+      "title": "Produits en Vedette",
+      "viewAll": "Voir Tous les Produits"
+    }
+  },
+  "shop": {
+    "title": "Notre Collection",
+    "subtitle": "Découvrez notre sélection d'essentiels du style de vie de pêche",
+    "addToCart": "Ajouter au Panier",
+    "viewDetails": "Voir les Détails"
+  },
+  "product": {
+    "addToCart": "Ajouter au Panier",
+    "quantity": "Quantité",
+    "description": "Description",
+    "specifications": "Spécifications",
+    "relatedProducts": "Produits Connexes"
+  },
+  "cart": {
+    "title": "Votre Panier",
+    "empty": "Votre panier est vide",
+    "continueShopping": "Continuer les Achats",
+    "subtotal": "Sous-total",
+    "checkout": "Commander",
+    "remove": "Supprimer"
+  },
+  "about": {
+    "title": "À Propos de XYRA",
+    "subtitle": "La Muse du Style de Vie de Pêche",
+    "story": {
+      "title": "Notre Histoire",
+      "content": "XYRA est né d'une passion pour la pêche et d'un désir d'apporter de l'élégance à ce sport. Nous croyons que la pêche n'est pas qu'un simple passe-temps—c'est un style de vie qui mérite raffinement et style."
+    },
+    "mission": {
+      "title": "Notre Mission",
+      "content": "Autonomiser les femmes qui aiment la pêche avec des équipements premium qui combinent fonctionnalité et élégance intemporelle. Chaque produit est conçu pour la pêcheuse moderne."
+    }
+  },
+  "footer": {
+    "copyright": "© 2026 XYRA. Tous droits réservés.",
+    "tagline": "La Muse du Style de Vie de Pêche"
+  }
+}

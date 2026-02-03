@@ -1,0 +1,58 @@
+{
+  "nav": {
+    "home": "Home",
+    "shop": "Shop",
+    "about": "About",
+    "cart": "Cart",
+    "cartEmpty": "Your cart is empty"
+  },
+  "home": {
+    "hero": {
+      "title": "XYRA",
+      "subtitle": "The Muse",
+      "description": "Elegant fishing lifestyle for the modern woman",
+      "cta": "Explore Collection"
+    },
+    "featured": {
+      "title": "Featured Products",
+      "viewAll": "View All Products"
+    }
+  },
+  "shop": {
+    "title": "Our Collection",
+    "subtitle": "Discover our curated selection of fishing lifestyle essentials",
+    "addToCart": "Add to Cart",
+    "viewDetails": "View Details"
+  },
+  "product": {
+    "addToCart": "Add to Cart",
+    "quantity": "Quantity",
+    "description": "Description",
+    "specifications": "Specifications",
+    "relatedProducts": "Related Products"
+  },
+  "cart": {
+    "title": "Your Cart",
+    "empty": "Your cart is empty",
+    "continueShopping": "Continue Shopping",
+    "subtotal": "Subtotal",
+    "checkout": "Checkout",
+    "remove": "Remove"
+  },
+  "about": {
+    "title": "About XYRA",
+    "subtitle": "The Muse of Fishing Lifestyle",
+    "story": {
+      "title": "Our Story",
+      "content": "XYRA was born from a passion for fishing and a desire to bring elegance to the sport. We believe that fishing is not just a hobby—it's a lifestyle that deserves sophistication and style."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "content": "To empower women who love fishing with premium gear that combines functionality with timeless elegance. Every product is designed with the modern angler in mind."
+    }
+  },
+  "footer": {
+    "copyright": "© 2026 XYRA. All rights reserved.",
+    "tagline": "The Muse of Fishing Lifestyle"
+  }
+}

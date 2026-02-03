@@ -1,0 +1,58 @@
+{
+  "nav": {
+    "home": "ホーム",
+    "shop": "ショップ",
+    "about": "について",
+    "cart": "カート",
+    "cartEmpty": "カートは空です"
+  },
+  "home": {
+    "hero": {
+      "title": "XYRA",
+      "subtitle": "ザ・ミューズ",
+      "description": "現代の女性のためのエレガントなフィッシングライフスタイル",
+      "cta": "コレクションを見る"
+    },
+    "featured": {
+      "title": "おすすめ商品",
+      "viewAll": "すべての商品を見る"
+    }
+  },
+  "shop": {
+    "title": "コレクション",
+    "subtitle": "厳選されたフィッシングライフスタイルの必需品をご覧ください",
+    "addToCart": "カートに追加",
+    "viewDetails": "詳細を見る"
+  },
+  "product": {
+    "addToCart": "カートに追加",
+    "quantity": "数量",
+    "description": "説明",
+    "specifications": "仕様",
+    "relatedProducts": "関連商品"
+  },
+  "cart": {
+    "title": "カート",
+    "empty": "カートは空です",
+    "continueShopping": "ショッピングを続ける",
+    "subtotal": "小計",
+    "checkout": "チェックアウト",
+    "remove": "削除"
+  },
+  "about": {
+    "title": "XYRAについて",
+    "subtitle": "フィッシングライフスタイルのミューズ",
+    "story": {
+      "title": "私たちの物語",
+      "content": "XYRAは、フィッシングへの情熱と、このスポーツにエレガンスをもたらすという願いから生まれました。フィッシングは単なる趣味ではなく、洗練とスタイルに値するライフスタイルであると私たちは信じています。"
+    },
+    "mission": {
+      "title": "私たちの使命",
+      "content": "機能性と時代を超えたエレガンスを組み合わせたプレミアムギアで、フィッシングを愛する女性を応援します。すべての製品は、現代のアングラーを念頭に置いて設計されています。"
+    }
+  },
+  "footer": {
+    "copyright": "© 2026 XYRA. All rights reserved.",
+    "tagline": "フィッシングライフスタイルのミューズ"
+  }
+}
