@@ -2,7 +2,7 @@
   "nav": {
     "home": "Home",
     "shop": "Shop",
-    "about": "About",
+    "about": "The Ritual",
     "cart": "Cart",
     "cartEmpty": "Your cart is empty"
   },
@@ -49,6 +49,11 @@
     "mission": {
       "title": "Our Mission",
       "content": "To empower women who love fishing with premium gear that combines functionality with timeless elegance. Every product is designed with the modern angler in mind."
+    },
+    "values": {
+      "elegance": "We believe that fishing gear should be as beautiful as it is functional.",
+      "quality": "Every product is crafted with premium materials and attention to detail.",
+      "empowerment": "We celebrate women who embrace their passion for fishing."
     }
   },
   "footer": {
