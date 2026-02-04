@@ -1,0 +1,80 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "shop": "Boutique",
+    "about": "À Propos",
+    "cart": "Panier",
+    "cartEmpty": "Votre panier est vide"
+  },
+  "products": {
+    "muse-bfs-28": {
+      "name": "Muse BFS 28mm [Édition Limitée]",
+      "description": "L'apogée de l'artisanat XYRA. Doté d'une bobine ultra-légère de 28mm conçue pour la pêche en finesse. Le corps arbore un contraste luxueux entre 'Noir Sidéral' et 'Or Rose', avec des poignées ornées d'éléments Swarovski. Chaque lancer est une valse au bout de vos doigts."
+    },
+    "siren-spin-2000": {
+      "name": "Siren Silk 2000",
+      "description": "Doux comme de la soie. Un moulinet spinning polyvalent doté d'une finition piano 'Blanc Perle' de qualité supérieure avec des accents or champagne. Son design compact épouse parfaitement les mains féminines, alliant finesse et polyvalence au quotidien."
+    },
+    "macaron-gift-box": {
+      "name": "Coffret Cadeau Macaron Cranks",
+      "description": "[Édition Limitée] Ensemble de leurres 'Dessert Moment'. Comprend quatre couleurs macarons : Vert Pistache, Rose Fraise, Jaune Citron et Violet Myrtille. Un emballage cadeau exquis, le présent parfait pour votre muse de la pêche."
+    },
+    "crystal-minnow": {
+      "name": "Crystal Prism Minnow",
+      "description": "Un cristal immergé. Corps en ABS transparent avec papier laser prismatique 3D interne, réfractant la lumière sous tous les angles comme un diamant. Une attraction fatale dans les eaux claires."
+    },
+    "mermaid-tail": {
+      "name": "Leurre Souple Queue de Sirène",
+      "description": "Un leurre souple aux nuances roses oniriques. Infusé d'un attractant exclusif à la crevette. Le matériau ultra-souple offre une nage naturelle semblable à une queue de sirène, ciblant les poissons les plus méfiants."
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "XYRA",
+      "subtitle": "La Muse",
+      "description": "Un style de vie de pêche élégant pour la femme moderne",
+      "cta": "Explorer la Collection"
+    },
+    "featured": {
+      "title": "Produits en Vedette",
+      "viewAll": "Voir Tous les Produits"
+    }
+  },
+  "shop": {
+    "title": "Notre Collection",
+    "subtitle": "Découvrez notre sélection d'essentiels du style de vie de pêche",
+    "addToCart": "Ajouter au Panier",
+    "viewDetails": "Voir les Détails"
+  },
+  "product": {
+    "addToCart": "Ajouter au Panier",
+    "quantity": "Quantité",
+    "description": "Description",
+    "specifications": "Spécifications",
+    "relatedProducts": "Produits Connexes"
+  },
+  "cart": {
+    "title": "Votre Panier",
+    "empty": "Votre panier est vide",
+    "continueShopping": "Continuer les Achats",
+    "subtotal": "Sous-total",
+    "checkout": "Commander",
+    "remove": "Supprimer"
+  },
+  "about": {
+    "title": "À Propos de XYRA",
+    "subtitle": "La Muse du Style de Vie de Pêche",
+    "story": {
+      "title": "Notre Histoire",
+      "content": "XYRA est né d'une passion pour la pêche et d'un désir d'apporter de l'élégance à ce sport. Nous croyons que la pêche n'est pas qu'un simple passe-temps—c'est un style de vie qui mérite raffinement et style."
+    },
+    "mission": {
+      "title": "Notre Mission",
+      "content": "Autonomiser les femmes qui aiment la pêche avec des équipements premium qui combinent fonctionnalité et élégance intemporelle. Chaque produit est conçu pour la pêcheuse moderne."
+    }
+  },
+  "footer": {
+    "copyright": "© 2026 XYRA. Tous droits réservés.",
+    "tagline": "La Muse du Style de Vie de Pêche"
+  }
+}
