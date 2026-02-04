@@ -1,64 +1,42 @@
 "use client";
 
-import { ShoppingBag, Eye } from "lucide-react";
-import { motion } from "framer-motion";
-import { useTranslations } from "next-intl";
+import Image from "next/image";
 import { Link } from "@/i18n/routing";
-import { Product } from "../types";
-import { useCart } from "../hooks/useCart";
+import { Product } from "../types"; // 确保引用的是刚才修改的那个 types
+import { useTranslations } from "next-intl";
 
 interface ProductCardProps {
   product: Product;
 }
 
-export function ProductCard({ product }: ProductCardProps) {
-  const t = useTranslations("shop");
-  const { addItem } = useCart();
+export const ProductCard = ({ product }: ProductCardProps) => {
+  const t = useTranslations("products"); // 获取产品翻译
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      className="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow"
-    >
-      {/* Product Image */}
-      <div className="relative aspect-square bg-gray-100 overflow-hidden">
-        <img
+    <Link href={`/product/${product.id}`} className="group block">
+      <div className="relative aspect-[4/5] overflow-hidden bg-gray-100 mb-4">
+        <Image
           src={product.image}
           alt={product.name}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          fill
+          className="object-cover transition-transform duration-700 group-hover:scale-105"
         />
-
-        {/* Quick Actions */}
-        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-3">
-          <Link
-            href={`/product/${product.id}`}
-            className="p-3 bg-white rounded-full text-charcoal hover:text-gold transition-colors"
-            aria-label={t("viewDetails")}
-          >
-            <Eye className="w-5 h-5" />
-          </Link>
-          <button
-            onClick={() => addItem(product)}
-            className="p-3 bg-gold rounded-full text-white hover:bg-gold-hover transition-colors"
-            aria-label={t("addToCart")}
-          >
-            <ShoppingBag className="w-5 h-5" />
-          </button>
-        </div>
+        {/* 遮罩层 (可选) */}
+        <div className="absolute inset-0 bg-black/0 transition-colors group-hover:bg-black/5" />
       </div>
 
-      {/* Product Info */}
-      <div className="p-5">
-        <p className="text-xs text-gray-500 uppercase tracking-wider mb-2">
+      <div className="text-center">
+        <p className="text-xs text-gold uppercase tracking-widest mb-1">
           {product.category}
         </p>
-        <h3 className="font-serif text-lg text-charcoal mb-2">
+        <h3 className="text-lg font-serif text-charcoal group-hover:text-gold transition-colors">
+          {/* 这里其实也可以用 t(`${product.id}.name`)，但用 product.name 做后备也行 */}
           {product.name}
         </h3>
-        <p className="text-gold font-semibold">${product.price}</p>
+        <p className="text-gray-500 mt-1 font-medium">
+          ${product.price.toLocaleString()}
+        </p>
       </div>
-    </motion.div>
+    </Link>
   );
-}
+};
