@@ -4,6 +4,10 @@ export interface Product {
   price: number;
   image: string;
   category: string;
-  // 👇 删掉 description，或者改成可选 (description?: string)
-  // 因为我们现在是从多语言 json 里读取描述，而不是从这里
+  // description 已经移除了，从翻译文件读取
+}
+
+// ✨ 新增：定义购物车商品 (继承自 Product，但多了一个 quantity 数量字段)
+export interface CartItem extends Product {
+  quantity: number;
 }
