@@ -1,17 +1,15 @@
 import type { NextConfig } from "next";
 import createNextIntlPlugin from "next-intl/plugin";
-import path from "path";
 
-// 🔨 强硬手段：使用 process.cwd() 获取项目根目录，拼接出绝对路径
-// 这样无论在哪个盘符，Next.js 都能精准找到它
-const withNextIntl = createNextIntlPlugin(
-  path.join(process.cwd(), "i18n/request.ts")
-);
+// 使用默认配置，让它自己去找 i18n/request.ts
+const withNextIntl = createNextIntlPlugin();
 
 const nextConfig: NextConfig = {
-  distDir: "dist",
+  // 👇 关键：删掉了 distDir: "dist"，让它默认生成到 .next 文件夹
   images: {
-    unoptimized: true,
+    // 如果你想用 Vercel 自带的图片优化，这行也可以删掉；
+    // 但为了保险起见（防止消耗过多配额），保留它也没问题。
+    unoptimized: true, 
   },
 };
 
